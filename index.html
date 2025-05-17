@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-  </head>
-  <body  
-    style="
-      background-image: url(https://images.unsplash.com/photo-1560803262-95a9de00a057?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);" 
-      class="flex justify-center h-screen items-center"
-    >
-    <link rel="stylesheet" href="style.css" />
-    <div  
-      class="bg-white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-blue-600 rounded-xl text-center animate__animated animate__fadeInDown m-8 w-80"
-      id="kartu" id="kartu2"
-    >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body
+  style="
+      background-image: url(https://images.unsplash.com/photo-1558354714-717c64e1a85a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);"
+  class="flex justify-center h-screen items-center">
+  <link rel="stylesheet" href="style.css" />
+  <div
+    class="bg-white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-red-400 rounded-xl text-center animate__animated animate__fadeInDown m-8 w-80"
+    id="kartu" id="kartu2">
     <h1 class="first">Happy Birthday</h1>
-    <h1 class="text-4xl text-blue-400 font-bold animate__animated animate__tada animate__infinite"
-    >
+    <h1 class="text-4xl text-blue-400 font-bold animate__animated animate__tada animate__infinite">
       Meityaaa
     </h1>
-      <button class="p-3 bg-gray-400 text-white rounded mt-5 hover:bg-pink-400 transition ease-in w-full animate__animated animate__delay-1s animate__pulse" onclick="ubahKartu()" 
-      >
-        Klik disini bro</button>
-    </div>
+    <button
+      class="p-3 bg-gray-400 text-white rounded mt-5 hover:bg-blue-500 transition ease-in w-full animate__animated animate__delay-1s animate__pulse"
+      onclick="ubahKartu()">
+      klik cinii lopp</button>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-    <script>
-      const duration = 15 * 1000,
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script>
+    const duration = 15 * 1000,
       animationEnd = Date.now() + duration,
       defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-      function randomInRange(min, max) {
+    function randomInRange(min, max) {
       return Math.random() * (max - min) + min;
-      }
+    }
 
-      const interval = setInterval(function() {
+    const interval = setInterval(function () {
       const timeLeft = animationEnd - Date.now();
 
       if (timeLeft <= 0) {
@@ -50,27 +47,27 @@
       const particleCount = 50 * (timeLeft / duration);
 
       // since particles fall down, start a bit higher than random
-        confetti(
+      confetti(
         Object.assign({}, defaults, {
-        particleCount,
-        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+          particleCount,
+          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
         })
       );
-        confetti(
+      confetti(
         Object.assign({}, defaults, {
-        particleCount,
-        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+          particleCount,
+          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
         })
       );
-      }, 250);
-      let kartu = document.getElementById("kartu")
-      function ubahKartu() {
-      kartu.innerHTML =`<h1 class="font-semibold text-wrap animate__animated animate__zoomIn">
-      selamat ulang tahun Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae alias! Reiciendis ipsam inventore minus. Ipsa veritatis laboriosam vitae delectus, adipisci rem! Totam, facere odit voluptas sit expedita necessitatibus dolores. 
+    }, 250);
+    let kartu = document.getElementById("kartu")
+    function ubahKartu() {
+      kartu.innerHTML = `<h1 class="font-semibold text-wrap animate__animated animate__zoomIn">
+      Happy Birthday to the most amazing girl!! I hope all of your day is as wonderful as you are. tetep semangat yaa ngejer impiannya mei, meski banya tantangan yg harus mei lalui. kl ada apa² cerita ajaa mas siap bantuin koo hehee
     </h1>
     <h2 class=""mt-3 animate__animated animatefadeIn>
-      <a href="https://shorturl.at/QG8J5">
-      - Dari : Dandy
+      <a href="https://bit.ly/wowkaget">
+      - from : pecinta piyikk
       <a/> 
     </h2>
 
@@ -78,16 +75,17 @@
       class="p-2 bg-slate-600 text-white rounded mt-5 hover:bg-slate-900 transition ease-in w-full animate__animated animate__delay-1s animate__pulse" 
       onclick="refresh()"
     >
-      selanjutnya
+      refresh
     </button>
     `;
     }
     function refresh() {
-        location.reload();
+      location.reload();
     }
-    
-</script>
+
+  </script>
 
 
 </body>
+
 </html>
